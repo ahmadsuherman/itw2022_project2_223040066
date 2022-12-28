@@ -78,21 +78,21 @@
         <div class="col-10 info-panel" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="3000">
           <div class="row">
             <div class="col-lg col-info-panel">
-              <img src="img/employee.png" alt="Employee" class="float-left" />
-              <h4>24 Hours</h4>
-              <p>Lorem ipsun dolor sit amet</p>
+              <img src="img/high-quality.png" alt="High quality printing" class="float-left" />
+              <h4>High quality printing</h4>
+              <p>Menghasilkan cetakan berkualitas tinggi yang tajam dan jelas.</p>
             </div>
 
             <div class="col-lg col-info-panel">
-              <img src="img/hires.png" alt="High-Res" class="float-left" />
-              <h4>High-Res</h4>
-              <p>Lorem ipsun dolor sit amet</p>
+              <img src="img/durability.png" alt="Durability" class="float-left" />
+              <h4>Durability</h4>
+              <p>Cetakannya kurang mungkin dan tahan lama.</p>
             </div>
 
             <div class="col-lg col-info-panel">
-              <img src="img/security.png" alt="Security" class="float-left" />
-              <h4>Security</h4>
-              <p>Lorem ipsun dolor sit amet</p>
+              <img src="img/custome.png" alt="Costumization Desaign" class="float-left" />
+              <h4>Costumization Desaign</h4>
+              <p>Bisa konstum desaign sesuka hati. dan masih banyak keunggulan lainnya.</p>
             </div>
           </div>
         </div>
@@ -416,6 +416,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    
   <script>
     const galleryImage = document.querySelectorAll(".gallery-img"),
     timelineContent = document.querySelectorAll(".timeline-content");
@@ -487,5 +488,20 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+
+      const links = document.querySelectorAll(".navbar-nav a");
+      for (const link of links) {
+        link.addEventListener("click", clickHandlerHref);
+      }
+
+      function clickHandlerHref(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+        scroll({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      }
   </script>
   </html>
