@@ -30,6 +30,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
@@ -61,7 +64,7 @@
 
     <div class="jumbotron jumbotron-fluid" id="home">
       <div class="container">
-        <h1 class="display-4">
+        <h1 class="display-4" data-aos="fade-down" data-aos-delay="50" data-aos-duration="3000">
           Get work done <span>faster</span><br />
           and <span>better with us</span>
         </h1>
@@ -71,7 +74,7 @@
     <div class="container">
       <!-- Awal Info Panel -->
       <div class="row justify-content-center">
-        <div class="col-10 info-panel">
+        <div class="col-10 info-panel" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="3000">
           <div class="row">
             <div class="col-lg col-info-panel">
               <img src="img/employee.png" alt="Employee" class="float-left" />
@@ -94,15 +97,15 @@
         </div>
       </div>
 
-      <div class="row workingspace">
+      <div class="row workingspace" data-aos="zoom-out" data-aos-delay="50" data-aos-duration="3000">
         <div class="col-lg-6">
           <img src="img/welcome.png" alt="workingspace" class="img-fluid" />
         </div>
 
-        <div class="col-lg-5 text-left">
-          <h3>You <span>Work</span> like at <span>home</span></h3>
+        <div class="col-lg-5 text-left" >
+          <h3 >You <span>Work</span> like at <span>home</span></h3>
           <p>Bekerja dengan suasana hati yang lebih asik dan mempelajari hal baru setiap harinya.</p>
-          <a href="#gallery"></a>
+          <a href="#gallery" class="btn btn-dark">Gallery</a>
         </div>
       </div>
 
@@ -112,33 +115,36 @@
             <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-offset="300">About Me</h2>
           </div>
         </div>
-        <div class="row mb-4 text-center">
+        <div class="row text-center">
           <div class="col">
-            Genetic Wear merupakan sebuah perusahaan konveksi yang sudah berdiri sejak tahun 2008 dan sudah memiliki beberapa divisi yang membantu menunjang kemajuan perusahaan Genetic Wear ini, yaitu divisi Sablon yang sudah berdiri sejak
-            tahun 2010, serta divisi sublime yang sudah berdiri sejak tahun 2019.
+            <p data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+            data-aos-delay="50">Genetic Wear merupakan sebuah perusahaan konveksi yang sudah berdiri sejak tahun 2008 dan sudah memiliki beberapa divisi yang membantu menunjang kemajuan perusahaan Genetic Wear ini, yaitu divisi Sablon yang sudah berdiri sejak
+            tahun 2010, serta divisi sublime yang sudah berdiri sejak tahun 2019.</p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-7 text-justify col-sm-6">
-            <p>
+            <p data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-offset="300">
               Perusahaan Genetic Wear ini bergerak sebagai vendor jersey, T-shirt sablon, kemeja, dan juga makloon sublime printing.Kami menggunakan bahan yang berkualitas terbaik dari setiap pemesanan, serta proses pembuatan dengan
               menggunakan teknologi yang canggih untuk memenuhi kepuasan costumer.
             </p>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-offset="300">
               Kami juga menerima jasa pembuatan baju berbagai jenis, seperti baju jersey atasan, jersey setelan, kaos oblong, kaos raglan, kaos polo, kemeja, dan jaket. Dan pemesanan lainya seperti pembuatan masker dengan desain bebas,
               serta pemesanan dengan sistem full order dan makloon.
             </p>
           </div>
           <div class="col-lg-5 text-center col-sm-6">
-            <img src="img/icon/icon-remove-bg.png" width="200" alt="About Image" class="about-image" />
+            <img data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-offset="300" src="img/icon/icon-remove-bg.png" width="200" alt="About Image" class="about-image" />
           </div>
         </div>
 
         <!-- layanan -->
-        <h2 class="h3 block-title text-center service">Layanan</h2>
+        <h2 class="h3 block-title text-center service" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="3000">Layanan</h2>
         <div class="row pt-5 mt-30 justify-content-center">
           <div class="col-lg-4 col-sm-6 pb-5">
-            <div class="card h-100">
+            <div class="card h-100" data-aos="fade-up-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px"><i class="bi bi-cart3 head-icon"></i></div>
               <div class="card-body text-center">
                 <h3 class="card-title pt-1">Full Order</h3>
@@ -147,7 +153,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-sm-6 pb-5">
-            <div class="card">
+            <div class="card" data-aos="fade-up-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
               <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px"><i class="bi bi-box head-icon"></i></div>
               <div class="card-body text-center">
                 <h3 class="card-title pt-1">Makloon</h3>
@@ -163,79 +169,79 @@
       <section id="gallery">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Gallery</h2>
+            <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-bottom">Gallery</h2>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/1.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/1.jpg" class="zoom img-fluid" alt="Gallery 1" />
+              <img src="img/gallery/1.jpg" class="zoom img-fluid gallery-img" alt="Gallery 1" />
             </a>
           </div>
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/2.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/2.jpg" class="zoom img-fluid" alt="Gallery 2" />
+              <img src="img/gallery/2.jpg" class="zoom img-fluid gallery-img" alt="Gallery 2" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/3.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/3.jpg" class="zoom img-fluid" alt="Gallery 3" />
+              <img src="img/gallery/3.jpg" class="zoom img-fluid gallery-img" alt="Gallery 3" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/4.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/4.jpg" class="zoom img-fluid" alt="Galley 4" />
+              <img src="img/gallery/4.jpg" class="zoom img-fluid gallery-img" alt="Galley 4" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/5.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/5.jpg" class="zoom img-fluid" alt="Gallery 5" />
+              <img src="img/gallery/5.jpg" class="zoom img-fluid gallery-img" alt="Gallery 5" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/6.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/6.jpg" class="zoom img-fluid" alt="Gallery 6" />
+              <img src="img/gallery/6.jpg" class="zoom img-fluid gallery-img" alt="Gallery 6" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/7.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/7.jpg" class="zoom img-fluid" alt="Gallery 7" />
+              <img src="img/gallery/7.jpg" class="zoom img-fluid gallery-img" alt="Gallery 7" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/8.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/8.jpg" class="zoom img-fluid" alt="Gallery 8" />
+              <img src="img/gallery/8.jpg" class="zoom img-fluid gallery-img" alt="Gallery 8" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/9.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/9.jpg" class="zoom img-fluid" alt="Gallery 9" />
+              <img src="img/gallery/9.jpg" class="zoom img-fluid gallery-img" alt="Gallery 9" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/10.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/10.jpg" class="zoom img-fluid" alt="Gallery 10" />
+              <img src="img/gallery/10.jpg" class="zoom img-fluid gallery-img" alt="Gallery 10" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/11.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/11.jpg" class="zoom img-fluid" alt="Gallery 11" />
+              <img src="img/gallery/11.jpg" class="zoom img-fluid gallery-img" alt="Gallery 11" />
             </a>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a href="img/gallery/12.jpg" class="fancybox" rel="ligthbox">
-              <img src="img/gallery/12.jpg" class="zoom img-fluid" alt="Gallery 12" />
+              <img src="img/gallery/12.jpg" class="zoom img-fluid gallery-img" alt="Gallery 12" />
             </a>
           </div>
 
@@ -244,7 +250,7 @@
       <section id="order">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Tahap Pemesanan</h2>
+            <h2 data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-offset="300">Tahap Pemesanan</h2>
           </div>
         </div>
         <div class="row">
@@ -293,11 +299,11 @@
       <section id="contact">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Us</h2>
+            <h2 data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">Contact Us</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6 col-sm mb-4">
+          <div class="col-lg-6 col-sm mb-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <p>
               Kirim masukkan untuk kami, team Genetic Wear. Setiap masukkan yang kalian kirim sangat berharga bagi kami. 
             </p>
@@ -319,7 +325,7 @@
                 <div class="col">Senin - Sabtu: 08:00 AM - 05.00 PM</div>
             </div>
           </div>
-          <div class="col-lg-6 col-sm">
+          <div class="col-lg-6 col-sm" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <form name="submit-to-google-sheet" data-form="validate">
               <div class="mb-3">
                 <label for="iName" class="form-label">Nama Lengkap</label>
@@ -382,4 +388,32 @@
       </div>
     </footer>
   </body>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    const galleryImage = document.querySelectorAll(".gallery-img"),
+    timelineContent = document.querySelectorAll(".timeline-content");
+    
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      timelineContent.forEach((img, i) => {
+        img.dataset.aos = "flip-up";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+        duration: 2000,
+      });
+  </script>
 </html>

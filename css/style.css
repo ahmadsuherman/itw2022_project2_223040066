@@ -435,4 +435,8 @@ section {
   .service {
     margin-top: 20px;
   }
+
+  #about p {
+    text-align: justify;
+  }
 }
