@@ -104,7 +104,7 @@
         </div>
 
         <div class="col-lg-5 text-left" >
-          <h3 >You <span>Work</span> like at <span>home</span></h3>
+          <h3 >You Work Like Play While Learning</h3>
           <p>Bekerja dengan suasana hati yang lebih asik dan mempelajari hal baru setiap harinya.</p>
           <a href="#gallery" class="btn btn-dark">Gallery</a>
         </div>
@@ -327,6 +327,14 @@
             </div>
           </div>
           <div class="col-lg-6 col-sm" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
+
+            <div class="alert alert-success alert-dismissible fade show d-none alert-contact" role="alert">
+              <strong>Terima Kasih!</strong> pesan anda suda kami terima.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
             <form name="submit-to-google-sheet" data-form="validate">
               <div class="mb-3">
                 <label for="iName" class="form-label">Nama Lengkap</label>
@@ -391,14 +399,23 @@
   </body>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
   <!-- Fancybox -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Parsley -->
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+      integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   <script>
     const galleryImage = document.querySelectorAll(".gallery-img"),
     timelineContent = document.querySelectorAll(".timeline-content");
@@ -428,6 +445,47 @@
           "fullScreen",
           "close"
         ],
+      });
+
+      const $form = $('form[data-form="validate"]'),
+        $formGroup = $form.find(".form-group");
+
+      $.extend(window.Parsley.options, {
+        errorClass: "is-invalid",
+        successClass: "is-valid",
+        validationThreshold: 0,
+        classHandler: function (ParsleyField) {
+          return ParsleyField.$element.parents(".form-control");
+        },
+        errorsContainer: function (ParsleyField) {
+          const $formColumn = ParsleyField.$element.parents(".form-group").find(".col-sm-10");
+          if ($formColumn.length) return $formColumn;
+          return ParsleyField.$element.parents(".form-group");
+        },
+        errorsWrapper: '<div class="invalid-feedback d-block"></div>',
+        errorTemplate: "<div></div>",
+      });
+
+      $form.parsley();
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxzXr5_1NZRUTOguMy3_ALPua3uuEWhQJh7ruTjzk5MAp4xTJWmaVWGbh7J7KSBLYnF/exec";
+      const form = document.forms["submit-to-google-sheet"],
+        btnSubmit = document.querySelector(".btn-submit"),
+        btnLoading = document.querySelector(".btn-loading"),
+        btnAlert = document.querySelector(".alert-contact");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        btnLoading.classList.toggle("d-none");
+        btnSubmit.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            btnLoading.classList.toggle("d-none");
+            btnSubmit.classList.toggle("d-none");
+            btnAlert.classList.toggle("d-none");
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
       });
   </script>
   </html>
